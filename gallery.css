@@ -1,0 +1,181 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+nav ul.full-width {
+    list-style-type: none;
+    background-color: #e6bf98;
+    padding: .75em;
+    margin: 12px 0 0 0;
+    border-bottom: 3px solid #cc8850;
+    overflow: auto;
+}
+
+
+/* splits nav into 2 columns
+  http://stackoverflow.com/questions/13104818/simple-2-column-navigation-with-css-and-a-single-list */
+
+nav li:nth-child(even) {
+    width: 50%;
+    float: right;
+    padding: 0.5em;
+}
+
+nav li:nth-child(odd) {
+    width: 50%;
+    float: left;
+    padding: 0.5em;
+}
+
+nav a {
+    color: #c80060;
+    text-decoration: none;
+    display: block;
+    padding-left: 3.333333%;
+}
+
+nav a:hover {
+    color: #00c4c7;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(img/clouds.png);
+}
+
+h1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.sub-heading {
+    display: flex;
+    justify-content: left;
+    background: #fff6e0;
+    padding-top: 10px;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-family: 'Niconne', cursive;
+    font-weight: normal;
+    color: #C80060;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 3px;
+    width: 90%;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+div.row {
+    background: #fff6e0;
+    margin-bottom: 0;
+    justify-content: center;
+}
+
+figure {
+    flex: 0 0 90%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+footer {
+    background-color: #00CDD1;
+    color: white;
+    margin: 0 0.5em 3em 0.5em;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer img {
+    width: 52px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+figure img {
+    width: 100%;
+}
+
+@media (min-width: 550px) {
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    figure {
+        flex: 0 0 45%;
+        display: flex;
+    }
+    .wrapper {
+        width: 97%;
+        max-width: 767px;
+    }
+    nav li,
+    nav li:nth-child(even),
+    nav li:nth-child(odd) {
+        display: inline-block;
+        float: none;
+        width: auto;
+        padding: 0;
+    }
+    nav a {
+        padding: 0em 1em 0em 1em;
+    }
+    h2 {
+        font-size: 2em;
+        border-bottom: 2px dotted #c80060;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 850px) {
+    .wrapper {
+        width: 97%;
+        max-width: 1200px;
+        float: none;
+    }
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    figure {
+        flex: 0 0 25%;
+        display: flex;
+    }
+    nav li,
+    nav li:nth-child(even),
+    nav li:nth-child(odd) {
+        display: inline-block;
+        float: none;
+        width: auto;
+        padding: 0;
+    }
+    nav a {
+        padding: 0em 1em 0em 1em;
+    }
+    h2 {
+        font-size: 3em;
+        border-bottom: 2px dotted #c80060;
+    }
+}
